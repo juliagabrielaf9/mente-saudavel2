@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Saudável</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat+Alternates:wght@400;600&family=Madimi+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+
+    <!-- BOTÃO DE AJUDA RÁPIDA (MEU REQUISITO) -->
+    <a href="tel:188" class="btn-panico" title="Precisa de ajuda imediata? Ligue 188">
+        <span class="panico-texto">Precisa de Ajuda? <strong>Ligue 188</strong></span>
+    </a>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="container-logo">
+            <img src="img/logo1.jfif" alt="Logo Mente Saudável" class="logo-imagem">
+            <h1 class="titulo-principal">
+                <span class="fonte-mente">Mente</span>
+                <span class="fonte-saudavel">Saudável</span>
+            </h1>
+            <h2 class="subtitulo">Equilíbrio é saúde.</h2>
+        </div>
+
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav class="menu-navegacao" aria-label="Menu principal">
+            <a class="menu-link" href="#inicio">Início</a>
+            <a class="menu-link" href="#mural">Mural</a>
+            <a class="menu-link" href="#sobre">Saúde Mental</a>
+            <a class="menu-link" href="#curiosidades">Curiosidades</a>
+            <a class="menu-link" href="#termometro">Termômetro</a>
+            <a class="menu-link" href="#quiz">Quiz</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PÁGINA DE ENTRADA / HERO -->
+        <section id="inicio" class="secao-hero">
+            <div class="hero-conteudo">
+                <h2 class="hero-titulo">Seja bem-vindo!</h2>
+                <p class="hero-texto">
+                    Este espaço foi criado exclusivamente para os alunos do SENAC.
+                    O portal oferece apoio para você lidar com os desafios dos estudos e mercado de trabalho. 
+                    Aqui, você encontra ferramentas, conteúdos e canais de ajuda para cuidar da sua saúde mental. 
+                    Lembre-se: o seu bem-estar é prioridade. Explore e use o site sempre que precisar!
+                </p>
+                <div class="hero-botoes">
+                    <a href="#termometro" class="hero-botao-um">Termômetro de Humor</a>
+                    <a href="#quiz" class="hero-botao-dois">Fazer o Quiz</a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- MURAL VIRTUAL (CARROSSEL) -->
+        <section id="mural" class="mural">
+            <h3 class="mural-titulo">Mural Motivacional</h3>
+            <div class="carrosel">
+                <div class="carrosel-track">
+                    <div class="mensagem">
+                        <div class="texto">Cada dia que você consegue levantar da cama já é uma vitória.</div>
+                        <div class="rodape"><span class="icone">💚</span><span class="data">24/08/2026</span></div>
+                    </div>
+                    <div class="mensagem">
+                        <div class="texto">A terapia mudou minha vida. Se você está hesitating, dê esse passo.</div>
+                        <div class="rodape"><span class="icone">🌼</span><span class="data">22/08/2026</span></div>
+                    </div>
+                    <div class="mensagem">
+                        <div class="texto">Aprendi que pedir ajuda é o ato mais corajoso que existe.</div>
+                        <div class="rodape"><span class="icone">💪</span><span class="data">20/08/2026</span></div>
+                    </div>
+                    <div class="mensagem">
+                        <div class="texto">Nunca subestime o poder de um pequeno passo.</div>
+                        <div class="rodape"><span class="icone">✨</span><span class="data">18/08/2026</span></div>
+                    </div>
+                </div>
+
+                <div class="controles">
+                    <button class="btn prev" aria-label="Anterior">&#10094;</button>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <button class="btn next" aria-label="Próximo">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+       <!-- INFORMAÇÕES SOBRE SAÚDE MENTAL -->
+<section id="sobre" class="secao-sobre">
+    <h2 class="sobre-titulo">Sobre a Saúde Mental</h2>
+
+    <div class="carrossel-container">
+
+        <!-- Área dos Slides -->
+        <div class="carrossel-slides">
+
+            <!-- SLIDE 1 -->
+            <article class="carrossel-slide carrossel-slide-ativo">
+                <div class="carrossel-imagem-wrapper">
+                    <img src="img/620e9fdc0c756d3cd7bd4eb09b1c16f2.jpg" alt="Maria Jose ajudando" class="carrossel-img">
+                </div>
+                <div class="carrossel-conteudo">
+                    <h3 class="carrossel-slide-titulo">O que é Saúde Mental?</h3>
+                    <p class="carrossel-texto">
+                        Ela está relacionada à forma como lidamos com nossos pensamentos, 
+                        sentimentoss, emoções, relacionamentos e situações do cotidiano.
+                        Ter saúde mental não significa estar feliz o tempo todo. É normal passar por momentos de tristeza, preocupação, estresse ou ansiedade. 
+                        O importante é reconhecer nossos sentimentos e buscar apoio quando necessário.
+                    </p>
+                </div>
+            </article>
+
+            <!-- SLIDE 2 -->
+            <article class="carrossel-slide">
+                <div class="carrossel-imagem-wrapper">
+                    <img src="img/107805f986e4535afed88a6cd2e64e43.jpg" alt="Andressa setembro amarelo" class="carrossel-img">
+                </div>
+                <div class="carrossel-conteudo">
+                    <h3 class="carrossel-slide-titulo">Reconhecer e Buscar Apoio</h3>
+                    <p class="carrossel-texto">
+                        Uma mente saudável envolve autoconhecimento, equilíbrio emocional, relacionamentos positivos, momentos de descanso e a capacidade de pedir ajuda quando precisamos. 
+                        Conversar com pessoas de confiança e procurar profissionais especializados são atitudes importantes para cuidar da saúde mental.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Botões de Navegação -->
+        <button class="carrossel-btn btn-anterior" aria-label="Slide anterior">&#10094;</button>
+        <button class="carrossel-btn btn-proximo" aria-label="Próximo slide">&#10095;</button>
+
+        <!-- Indicadores (Bolinhas) -->
+        <div class="carrossel-indicadores">
+            <span class="indicador ativo" data-slide="0"></span>
+            <span class="indicador" data-slide="1"></span>
+        </div>
+
+    </div>
+</section>
+
+        <hr class="hr">
+
+        <!-- CURIOSIDADES / ÁREAS DE CUIDADO -->
+        <section id="curiosidades" class="secao-areas-cuidado">
+            <h2 class="titulo-areas">Áreas de Cuidado</h2>
+            <div class="cards-container">
+                <article class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">O peso do estresse diário</h5>
+                        <p class="card-text">Prazos e cobranças acumulam tensões que esgotam nossa energia mental. Pequenas pausas e limites saudáveis são essenciais.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Autocuidado não é egoísmo</h5>
+                        <p class="card-text">Descansar a mente é tão importante quanto revisar as matérias da semana. Encontre tempo para desconectar.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sinais de que é hora de parar</h5>
+                        <p class="card-text">Insônia constante, irritabilidade e cansaço extremo são alertas claros do corpo. Não ignore seus limites.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- TERMÔMETRO INTERATIVO -->
+        <section id="termometro" class="secao-termometro">
+            <h2>Termômetro do Meu Dia</h2>
+            <p>Como você está se sentindo hoje?</p>
+            
+            <div class="termometro-box">
+                <label for="nivel">Escolha um nível de 0 a 10:</label>
+                <input type="range" id="nivel" name="nivel" min="0" max="10" value="5" oninput="mostrarNivel()">
+                
+                <p class="resultado-nivel">
+                    Meu nível: <strong id="valorNivel">5</strong>
+                </p>
+                <p id="mensagemNivel" class="mensagem-nivel">
+                    Você está em um nível intermediário. Reserve um momento para perceber como está se sentindo.
+                </p>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- QUIZ -->
+        <section id="quiz" class="quizz">
+            <h2>Quiz - Mente Saudável</h2>
+            <form onsubmit="verificarQuiz(event)" class="form-quiz">
+                <fieldset>
+                    <legend>1. Qual atitude pode contribuir para a saúde mental?</legend>
+                    <label><input type="radio" name="pergunta1" value="a"> Ignorar todos os sentimentos</label>
+                    <label><input type="radio" name="pergunta1" value="b"> Buscar equilíbrio e apoio quando necessário</label>
+                    <label><input type="radio" name="pergunta1" value="c"> Evitar qualquer contato social</label>
+                    <label><input type="radio" name="pergunta1" value="d"> Nunca falar sobre problemas</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Pedir ajuda quando estamos passando por dificuldades é:</legend>
+                    <label><input type="radio" name="pergunta2" value="a"> Uma atitude de cuidado</label>
+                    <label><input type="radio" name="pergunta2" value="b"> Um sinal de fraqueza</label>
+                    <label><input type="radio" name="pergunta2" value="c"> Algo que deve ser evitado</label>
+                    <label><input type="radio" name="pergunta2" value="d"> Algo desnecessário</label>
+                </fieldset>
+
+                <button type="submit" class="btn-submit">Ver resultado</button>
+            </form>
+            <p id="resultadoQuiz" class="resultado-quiz"></p>
+        </section>
+
+        <hr class="hr">
+
+        <!-- FORMULÁRIO DO MURAL -->
+        <section class="mural-envio">
+            <h2>Escreva sua mensagem</h2>
+            <p>Compartilhe uma mensagem positiva, uma reflexão ou uma palavra de incentivo.</p>
+
+            <form onsubmit="publicarMensagem(event)" class="form-mural">
+                <div class="grupo-form">
+                    <label for="nome">Seu nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="mensagem">Sua mensagem:</label>
+                    <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Publicar no mural</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape-principal">
+        <p>&copy; 2026 Mente Saudável - Informação e conscientização sobre saúde mental.</p>
+        <p class="aviso-legal">Este site possui caráter educativo e não substitui orientação de profissionais de saúde.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,663 @@
+/* =========================
+   RESET BÁSICO E VARIÁVEIS
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #F1EDEA;
+  color: #096C6C;
+  line-height: 1.6;
+  padding-bottom: 20px;
+}
+
+.hr {
+  border: 0;
+  height: 1px;
+  background: #dcd6d0;
+  margin: 40px auto;
+  width: 80%;
+}
+
+/* =========================
+   BOTÃO DE PÂNICO (LIGUE 188)
+========================= */
+.btn-panico {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4691b0;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-panico:hover {
+  background-color: #cdba50;
+  transform: scale(1.05);
+}
+
+/* =========================
+   CABEÇALHO E MENU
+========================= */
+.cabecalho {
+  padding: 40px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-imagem {
+  height: 72px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.titulo-principal {
+  display: flex;
+  gap: 8px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.fonte-mente {
+  font-family: 'DM Serif Display', serif;
+  color: #096C6C;
+}
+
+.fonte-saudavel {
+  font-family: 'Playfair Display', serif;
+  font-style: italic; 
+  color: #F1C338;
+}
+
+.subtitulo {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d6a100;
+  margin-top: -5px;
+}
+
+/* Menu Navegação */
+.menu-navegacao {
+  width: min(1100px, 90vw);
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.menu-link {
+  color: #096C6C;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.menu-link:hover {
+  color: #096C6C;
+  background-color: rgba(241, 195, 56, 0.3);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   HERO / ENTRADA
+========================= */
+.secao-hero {
+  background: #FFFFFF;
+  padding: 50px 20px;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.hero-conteudo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-titulo {
+  font-size: 2.2rem;
+  color: #096C6C;
+  margin-bottom: 20px;
+}
+
+.hero-texto {
+  max-width: 700px;
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.hero-botoes {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-botoes a {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-botao-um {
+  background-color: #F1C338;
+  color: #096C6C;
+}
+
+.hero-botao-dois {
+  background-color: #096C6C;
+  color: #FFFFFF;
+}
+
+.hero-botoes a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   MURAL MOTIVACIONAL (CARROSSEL)
+========================= */
+.mural {
+  background-color: #B3EBF2;
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mural-titulo {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #096C6C;
+  margin-bottom: 20px;
+}
+
+.carrosel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrosel-track {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.5s ease;
+}
+
+.mensagem {
+  flex: 0 0 calc(33.33% - 10px); /* CORRIGIDO: Ponto em vez de vírgula */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.texto {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #096C6C;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #999;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background: #096C6C;
+}
+/* =========================
+   CARROSSEL SAÚDE MENTAL
+========================= */
+.secao-sobre {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.sobre-titulo {
+  text-align: center;
+  font-size: 2rem;
+  color: #096C6C;
+  margin-bottom: 25px;
+}
+
+/* Container principal com fundo branco e sombra */
+.carrossel-container {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.carrossel-slides {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Ajuste dos Slides (Flexbox para alinhar Foto e Texto lado a lado) */
+.carrossel-slide {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Se o slide não for o ativo, ele esconde (pode ser controlado via JS) */
+.carrossel-slide:not(.carrossel-slide-ativo) {
+  display: none;
+}
+
+/* Wrapper da Imagem */
+.carrossel-imagem-wrapper {
+  flex: 1 1 40%;
+  min-width: 280px;
+}
+
+.carrossel-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Conteúdo do Texto */
+.carrossel-conteudo {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carrossel-slide-titulo {
+  color: #096C6C;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.carrossel-texto {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Botões de Navegação Lateral (< e >) */
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #F1C338;
+  color: #096C6C;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carrossel-btn:hover {
+  background-color: #096C6C;
+  color: #FFFFFF;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.btn-anterior {
+  left: -15px; /* Fica levemente destacado na borda esquerda */
+}
+
+.btn-proximo {
+  right: -15px; /* Fica levemente destacado na borda direita */
+}
+
+/* Indicadores / Bolinhas inferiores */
+.carrossel-indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.indicador {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicador.ativo {
+  background-color: #096C6C;
+  width: 24px;
+  border-radius: 10px;
+}
+
+/* Responsividade para Telas Menores (Celular e Tablet) */
+@media (max-width: 768px) {
+  .carrossel-slide {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .carrossel-imagem-wrapper {
+    width: 100%;
+  }
+
+  .carrossel-img {
+    height: 200px;
+  }
+
+  .btn-anterior {
+    left: 5px;
+  }
+
+  .btn-proximo {
+    right: 5px;
+  }
+}
+/* =========================
+   CURIOSIDADES / CARDS
+========================= */
+.secao-areas-cuidado {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.titulo-areas {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 25px;
+  width: 280px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.card-title {
+  color: #096C6C;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* =========================
+   TERMÔMETRO INTERATIVO
+========================= */
+.secao-termometro {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.termometro-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.termometro-box input[type="range"] {
+  width: 100%;
+  margin: 20px 0;
+  accent-color: #096C6C;
+}
+
+.resultado-nivel {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.mensagem-nivel {
+  font-style: italic;
+  color: #555;
+}
+
+/* =========================
+   QUIZ
+========================= */
+.quizz {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.quizz h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-quiz fieldset {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+}
+
+.form-quiz legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #096C6C;
+}
+
+.form-quiz label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* =========================
+   FORMULÁRIOS GERAIS E BOTÕES
+========================= */
+.mural-envio {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.form-mural {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.grupo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-mural input, .form-mural textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.btn-submit {
+  background-color: #096C6C;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #075252;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+.rodape-principal {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #096C6C;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.aviso-legal {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* =========================
+   RESPONSIVIDADE (MEDIA QUERIES)
+========================= */
+
+/* Tablet (Telas até 768px) */
+@media (max-width: 768px) {
+  .mensagem {
+    flex: 0 0 calc(50% - 10px); /* Exibe 2 cards por vez */
+  }
+
+  .hero-titulo {
+    font-size: 1.8rem;
+  }
+}
+
+/* Celular (Telas até 480px) */
+@media (max-width: 480px) {
+  .menu-navegacao {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mensagem {
+    flex: 0 0 100%; /* Exibe 1 card por vez */
+  }
+
+  .hero-botoes {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-botoes a {
+    width: 100%;
+  }
+
+  .btn-panico {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 14px;
+  }
+  
+  .panico-texto {
+    font-size: 0.85rem;
+  }
+}
